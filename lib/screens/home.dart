@@ -9,10 +9,13 @@ class _HomeState extends State<Home> {
 
   buildAnimation(){
     return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/cat.png'),
-        )
+      height: 200,
+      width: 200,
+      decoration: new BoxDecoration(
+          image: new DecorationImage(
+            image: AssetImage('assets/images/cat.png'),
+            fit: BoxFit.contain,
+          )
       ),
     );
   }
@@ -21,7 +24,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Animation'),
+        title: Center(child: Text('Animation')),
 
       ),
       body: buildAnimation(),
